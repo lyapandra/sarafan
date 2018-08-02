@@ -12,11 +12,12 @@ Vue.component('message-row', {
 Vue.component('messages-list', {
     props: ['messages'],
     template: '<div><message-row v-for="message in messages" :key="message.id" :message="message" /></div>',
-    created: function() {
+    created: function () {
         messageApi.get().then(result =>
-        result.json().then(data =>
-        data.forEach(message => this.messages.push(message))
-        )
+        console.log(result)
+            /*result.json().then(data =>
+                data.forEach(message => this.messages.push(message))
+            )*/
         )
     }
 });

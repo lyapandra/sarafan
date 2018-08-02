@@ -18,10 +18,10 @@ public class MessageController {
 
     private  int counter = 4;
 
-    @GetMapping("index")
+    /*@GetMapping("index")
     public String index(){
         return "index";
-    }
+    }*/
 
     private List<Map<String,String>> messages = new ArrayList<Map<String,String>>(){{
         add(new HashMap<String,String>() {
